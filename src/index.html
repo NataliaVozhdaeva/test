@@ -5,14 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css" />
+
     <title>test_Vozhdaeva</title>
   </head>
   <body>
-    <header class="header"><h1 class="header-title">Title</h1></header>
+    <header class="header"></header>
     <main class="main">
-      <div class="content">content2222</div>
+      <aside class="main-aside"><h1 class="aside-title">Sign up</h1></aside>
+      <secton class="formContainer">
+        <h1 class="formContainer-title">New user?</h1>
+        <p class="formContainer-lid">Use the form below to create your account.</p>
+        <form action="" class="form">
+          <label for="firstName" class="label firstname"
+            >First Name <br />
+            <input class="form-field" type="text" id="firstName" name="firstName" />
+          </label>
+          <label for="lastname" class="label lastname"
+            >Last Name <br />
+            <input class="form-field" type="text" id="lastName" name="lastName" />
+          </label>
+          <label for="nationality" class="label nationality"
+            >Nationality <br />
+            <select class="form-field select" id="nationality" name="nationality">
+              <option class="option" value="American" checked>American</option>
+              <option class="option" value="Canadian">Canadian</option>
+              <option class="option" value="Induan">Induan</option>
+            </select>
+          </label>
+          <label for="email" class="label email"
+            >E-mail <br />
+            <input class="form-field" type="email" id="email" name="email" />
+          </label>
+          <label for="birthday" class="label birthday"
+            >Date of Birth <br />
+            <select class="form-field form-field__day select" id="birthDay" name="birthDay">
+              <option class="option" value="01" checked>21</option>
+              <option class="option" value="02">02</option>
+            </select>
+            <select class="form-field form-field__month select" id="birthMonth" name="birthMonth">
+              <option class="option" value="jan" checked>December</option>
+              <option class="option" value="feb">February</option>
+            </select>
+            <select class="form-field form-field__year select" id="birthYear" name="birthYear">
+              <option class="option" value="1950" checked>1995</option>
+              <option class="option" value="1951">1951</option>
+            </select>
+          </label>
+          <label for="gender" class="label gender"
+            >Gender <br />
+            <p class="form-field__radio">
+              <span><input type="radio" name="gender" id="male" value="male" />Male</span>
+              <span><input type="radio" name="gender" id="female" value="female" />Female</span>
+            </p>
+          </label>
+          <label for="password" class="label password"
+            >Password <br />
+            <input class="form-field" type="password" id="password" name="password" />
+          </label>
+          <label for="passwordConfirm" class="label passwordConfirm"
+            >Confirm Password <br />
+            <input class="form-field" type="passwordConfirm" id="passwordConfirm" name="passwordConfirm" />
+          </label>
+        </form>
+        <section class="userAutotize">
+          <span class="userAutotize-message">Have an account? <a class="logIn" href="">Login</a></span>
+          <button type="submit" class="userAutotize-btn btn__submit">Complete Signup</button>
+        </section>
+      </secton>
     </main>
     <footer class="footer"></footer>
   </body>
+  <script></script>
 </html>
