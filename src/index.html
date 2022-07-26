@@ -15,16 +15,16 @@
     <main class="main">
       <aside class="main-aside"><h1 class="aside-title">Sign up</h1></aside>
       <secton class="formContainer">
-        <h1 class="formContainer-title">New user?</h1>
-        <p class="formContainer-lid">Use the form below to create your account.</p>
-        <form action="" class="form">
+        <h1 class="formContainer-title mainTitle">New user?</h1>
+        <p class="formContainer-lid lid">Use the form below to create your account.</p>
+        <form action="" class="form" id="auth">
           <label for="firstName" class="label firstname"
             >First Name <br />
-            <input class="form-field" type="text" id="firstName" name="firstName" />
+            <input class="form-field" type="text" id="firstName" name="firstName" required />
           </label>
           <label for="lastname" class="label lastname"
             >Last Name <br />
-            <input class="form-field" type="text" id="lastName" name="lastName" />
+            <input class="form-field" type="text" id="lastName" name="lastName" required />
           </label>
           <label for="nationality" class="label nationality"
             >Nationality <br />
@@ -36,7 +36,7 @@
           </label>
           <label for="email" class="label email"
             >E-mail <br />
-            <input class="form-field" type="email" id="email" name="email" />
+            <input class="form-field" type="email" id="email" name="email" placeholder="email@email.com" required />
           </label>
           <label for="birthday" class="label birthday"
             >Date of Birth <br />
@@ -62,20 +62,27 @@
           </label>
           <label for="password" class="label password"
             >Password <br />
-            <input class="form-field" type="password" id="password" name="password" />
+            <input class="form-field" type="password" id="password" name="password" required />
           </label>
           <label for="passwordConfirm" class="label passwordConfirm"
             >Confirm Password <br />
-            <input class="form-field" type="passwordConfirm" id="passwordConfirm" name="passwordConfirm" />
+            <input class="form-field" type="password" id="passwordConfirm" name="passwordConfirm" required />
           </label>
         </form>
         <section class="userAutotize">
-          <span class="userAutotize-message">Have an account? <a class="logIn" href="">Login</a></span>
-          <button type="submit" class="userAutotize-btn btn__submit">Complete Signup</button>
+          <span class="userAutotize-message toLogin">Have an account? <a class="logIn" href="">Login</a></span>
+          <button type="submit" form="auth" class="userAutotize-btn btn__submit">Complete Signup</button>
         </section>
       </secton>
+      <!-- <section class="sucsessfulReg">
+        <div class="wrapper">
+          <h1 class="sucsessfulReg-title mainTitle">Thank You!</h1>
+          <p class="sucsessfulReg-lid lid">you registered!</p>
+        </div>
+        <span class="toLogin">Have an account? <a class="logIn" href="">Login</a></span>
+      </section> -->
     </main>
     <footer class="footer"></footer>
   </body>
-  <script></script>
+  <script src="./scripts/main.js"></script>
 </html>

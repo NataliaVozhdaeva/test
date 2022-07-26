@@ -11,6 +11,10 @@ $label-color: #7c7c7c;
   padding: 0;
 }
 
+svg {
+  fill: $base-color;
+}
+
 .main {
   box-sizing: border-box;
   display: flex;
@@ -20,6 +24,7 @@ $label-color: #7c7c7c;
   height: 480px;
   box-shadow: 0 0 5px $label-color;
   margin: 60px 68px;
+  background: url(../img/man.svg) no-repeat 100% 100%/46%;
 
   &-aside {
     background: $base-color;
@@ -43,22 +48,22 @@ $label-color: #7c7c7c;
   letter-spacing: 0.5px;
 }
 
+.mainTitle {
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.46px;
+}
+
+.lid {
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: -0.35px;
+}
+
 .formContainer {
   width: 485px;
   margin: 40px 22px 32px 19px;
   letter-spacing: -0.46px;
-
-  &-title {
-    font-size: 22px;
-    line-height: 26px;
-    letter-spacing: -0.46px;
-  }
-
-  &-lid {
-    font-size: 14px;
-    line-height: 15px;
-    letter-spacing: -0.35px;
-  }
 }
 
 form {
@@ -83,7 +88,7 @@ form {
   border: none;
   border-bottom: #f2f2f2 solid 1px;
   width: 234px;
-  background-color: #fff;
+  background-color: transparent;
   letter-spacing: 0.5px;
 
   &__day {
@@ -170,6 +175,35 @@ input[name='gender'] {
   border-bottom: $base-color 1px solid;
 }
 
+.form-field:focus ~ .popup {
+  display: none;
+}
+
+.error {
+  border-bottom: #ff2828 solid 2px;
+  color: #ff2828;
+}
+
+.correct::after {
+  content: '';
+  width: 8px;
+  height: 11px;
+  border: 1px solid $base-color;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-top: transparent;
+  border-left: transparent;
+}
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+
 .logIn {
   color: $base-color;
   letter-spacing: 1px;
@@ -195,4 +229,27 @@ input[name='gender'] {
   &-message {
     margin-top: 5px;
   }
+}
+
+.sucsessfulReg {
+  box-sizing: border-box;
+  margin: 40px 22px 32px 19px;
+
+  width: 485px;
+
+  margin-top: 217px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding-left: 44px;
+}
+
+.toLogin {
+  display: flex;
+  margin-top: 152px;
+  font-size: 13px;
+  line-height: 15px;
 }

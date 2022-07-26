@@ -30,11 +30,16 @@ function buildSass() {
     .pipe(browserSync.stream());
 }
 
+function buildJs() {
+  return src('src/scripts/main.js').pipe(dest('dist/js')).pipe(dest('src/js')).pipe(browserSync.stream());
+}
+
 function html() {
   return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream());
 }
 
 function serve() {
+  watch('src/scripts/**/*.js', buildJs);
   watch('src/styles/**/*.scss', buildSass);
   watch('src/**/*.html', html);
 }
@@ -49,5 +54,5 @@ function cleanDist() {
   return del('dist/**/*', { force: true });
 }
 
-exports.build = series(cleanDist, buildSass, html, copy);
-exports.default = series(buildSass, parallel(browsersync, serve));
+exports.build = series(cleanDist, buildSass, buildJs, html, copy);
+exports.default = series([buildSass, buildJs], parallel(browsersync, serve));
